@@ -1,0 +1,9 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/    #基于docker改造localhost
+server:
+  port: 8666
+spring:
+  application:
+    name: service-ribbon

@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      profile: dev
+      label: master
+      discovery:
+        enabled: true
+        service-id: config-server
+    bus:
+      trace:
+        enabled: true      #检测每个服务实例所发送的事件
+  rabbitmq:
+    host: localhost
+    port: 5673
+    username: guest
+    password: guest
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8222/eureka/
+management:
+  security:
+    enabled: false
